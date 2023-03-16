@@ -1,5 +1,6 @@
 # Simple PubSub
 
+📻📻📻
 A small Unity Framework for Sending & Receiving Message through Signal without concrete implementation needed
 
 

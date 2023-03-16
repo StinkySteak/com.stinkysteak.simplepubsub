@@ -3,6 +3,8 @@
 📻📻📻
 A small Unity Framework for Sending & Receiving Message through Signal without concrete implementation needed
 
+##[Superior Version of PubSub](https://github.com/StinkySteak/com.stinkysteak.pubsub)
+
 
 ## Usage/Examples
 

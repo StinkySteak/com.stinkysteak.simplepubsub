@@ -1,0 +1,15 @@
+{
+  "name": "com.stinkysteak.simpubsub",
+  "version": "0.1.0",
+  "displayName": "Simple Pub-Sub",
+  "description": "Simple Publish Subscribe framework",
+  "unity": "2021.1",
+  "documentationUrl": "https://github.com/StinkySteak/simple-pubsub",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "author": {
+    "name": "stinkysteak",
+    "email": "stinkysteak@steaksoft.com",
+    "url": "https://steaksoft.net"
+  }
+}

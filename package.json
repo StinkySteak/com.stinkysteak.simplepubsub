@@ -8,8 +8,15 @@
   "changelogUrl": "https://example.com/changelog.html",
   "licensesUrl": "https://example.com/licensing.html",
   "author": {
-    "name": "stinkysteak",
+    "name": "Stinkysteak",
     "email": "stinkysteak@steaksoft.com",
     "url": "https://steaksoft.net"
-  }
+  },
+  "samples" : [
+    {
+      "displayName":"Sample Scene",
+      "description":"Sample Simple Pub Sub Demonstration",
+      "path":"Samples~/Demo"
+    }
+  ]
 }

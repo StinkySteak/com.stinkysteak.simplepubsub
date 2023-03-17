@@ -1,6 +1,6 @@
 {
   "name": "com.stinkysteak.simpubsub",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Simple Pub-Sub",
   "description": "Simple Publish Subscribe framework",
   "unity": "2021.1",

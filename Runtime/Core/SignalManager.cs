@@ -1,28 +1,21 @@
-using System.Collections.Generic;
-using UnityEngine;
 using System;
 
-public class SignalManager : MonoBehaviour
+namespace Stinkysteak.SimplePubsub
 {
-    public static SignalManager Instance { get; private set; }
-
-    private void Awake()
-        => Instance = this;
-
-    private readonly List<ISubscription> _subscriptions = new();
-
-    public void Subscribe<T>(Action<T> callback) where T : ISignal
-        => _subscriptions.Add(new Subscription<T>(callback));
-
-    public void Publish(ISignal signal)
+    public static class SignalManager
     {
-        Type signalType = signal.GetType();
+        public static void Subscribe<T>(Action<T> callback, bool oneTime) where T : ISignal
+            => SignalManagerInstance.Instance.Subscribe(callback, oneTime);
 
-        foreach (ISubscription subscription in _subscriptions)
-        {
-            if (subscription.SubscribedSignal != signalType) continue;
+        /// <summary>
+        /// <b>Example Usage: </b><br/>
+        /// | Unsubscribe(this, typeof(LogSignal)) ;
+        /// </summary>
+        /// <param name="signalType">Example: typeof(LogSignal))</param>
+        public static void Unsubscribe(object listener, Type signalType) 
+           => SignalManagerInstance.Instance.Unsubscribe(listener, signalType);
 
-            subscription.Invoke(signal);
-        }
+        public static void Publish(ISignal signal)
+            => SignalManagerInstance.Instance.Publish(signal);
     }
 }
